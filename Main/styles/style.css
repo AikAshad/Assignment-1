@@ -1,0 +1,680 @@
+/* =========================================
+   Global Reset & Base Styles
+   ========================================= */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111827;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   Buttons
+   ========================================= */
+.common-btn {
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primary-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+.primary-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.outline-btn {
+    background-color: transparent;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
+
+.outline-btn:hover {
+    background-color: #f9fafb;
+}
+
+/* =========================================
+   Navigation
+   ========================================= */
+header {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 20px;
+}
+
+.navbar img {
+    height: 24px;
+    display: block;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #111827;
+}
+
+/* =========================================
+   Hero Section
+   ========================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 32px;
+    color: #e5e7eb;
+}
+
+/* =========================================
+   Speakers Section
+   ========================================= */
+.speakers {
+    width: 100%;
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.speakers h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 48px;
+    letter-spacing: -0.5px;
+}
+
+.speaker-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.speaker-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.speaker-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.category {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 24px 24px 8px;
+    letter-spacing: 0.5px;
+}
+
+.speaker-card h3 {
+    margin: 0 24px 8px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.speaker-card p {
+    margin: 0 24px 32px;
+    color: #4b5563;
+    font-size: 15px;
+}
+
+/* =========================================
+   Pricing Section
+   ========================================= */
+.pricing {
+    width: 100%;
+    padding: 60px 20px 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.pricing-subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 60px;
+    font-size: 16px;
+}
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tier-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4b5563;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.pricing-card h3 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.per-person {
+    color: #6b7280;
+    margin-bottom: 32px;
+    font-size: 14px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 32px;
+    flex-grow: 1;
+}
+
+.pricing-card li {
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #374151;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-card li::before {
+    content: "•";
+    color: #9ca3af;
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.pricing-card button {
+    width: 100%;
+}
+
+.featured {
+    background: #0f172a;
+    border-color: #0f172a;
+    color: white;
+}
+
+.featured .tier-name, 
+.featured .per-person {
+    color: #9ca3af;
+}
+
+.featured h3 {
+    color: white;
+}
+
+.featured li {
+    color: #d1d5db;
+}
+
+/* ==========================================
+   EXPERIENCE SECTION
+   DevConf 2026
+========================================== */
+
+.experience-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.experience-section .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ==========================
+   SECTION HEADER
+========================== */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 50px;
+    background: #f9fafb;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.section-heading p {
+    max-width: 760px;
+    margin: auto;
+    color: #6b7280;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ==========================
+   EXPERIENCE GRID
+========================== */
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.experience-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 35px;
+    transition: all .3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    border-color: #d1d5db;
+}
+
+/* Featured Card */
+
+.featured {
+    border: 2px solid #2563eb;
+}
+
+.featured:hover {
+    border-color: #1d4ed8;
+}
+
+/* ==========================
+   ICON
+========================== */
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #eff6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+/* ==========================
+   LABEL
+========================== */
+
+.card-label {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.experience-card h3 {
+    font-size: 34px;
+    color: #111827;
+    margin-bottom: 18px;
+    line-height: 1.3;
+}
+
+.experience-card p {
+    color: #6b7280;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.experience-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+.experience-card ul li {
+    color: #374151;
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.experience-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 28px;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.experience-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+.experience-stats {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+.stat-box {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    text-align: center;
+    padding: 35px 20px;
+    transition: .3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.stat-box h3 {
+    color: #2563eb;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 992px) {
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-stats {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .experience-section {
+        padding: 80px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .section-heading p {
+        font-size: 16px;
+    }
+
+    .experience-card {
+        padding: 30px;
+    }
+
+    .experience-card h3 {
+        font-size: 28px;
+    }
+
+    .experience-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-box h3 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .experience-section {
+        padding: 70px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .experience-card {
+        padding: 24px;
+    }
+
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    .experience-btn {
+        display: block;
+        text-align: center;
+    }
+}
+/* =========================================
+   Footer Section
+   ========================================= */
+.site-footer {
+    background-color: #0f172a; /* Dark slate background from reference */
+    color: #9ca3af; /* Light gray text */
+    padding: 60px 20px 40px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Top Section Flexbox */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo img {
+    height: 32px; /* Adjust based on your actual mini-logo size */
+    display: block;
+}
+
+/* Social Media Icons */
+.footer-socials {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.footer-socials a {
+    color: #9ca3af;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-socials a:hover {
+    color: #ffffff; /* Turns white on hover for interactivity */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Divider Line */
+.footer-divider {
+    border: none;
+    border-top: 1px solid #1e293b; /* Subtle dark border */
+    margin: 0 0 30px 0;
+}
+
+/* Bottom Section Flexbox (matches the dark snippet image) */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-legal a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+    color: #ffffff;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .footer-top, 
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
